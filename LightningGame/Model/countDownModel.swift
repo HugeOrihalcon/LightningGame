@@ -26,6 +26,7 @@ class CountDown {
             repeats: true)
     }
     
+    
     @objc func update() {
         if let startTime = startTime {
             t = 10.00 - (Date.timeIntervalSinceReferenceDate - startTime)
