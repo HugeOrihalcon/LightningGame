@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		685508CCB89E03ABCBE07590 /* Pods_LightningGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36663D09FF5FAF82F0FC065C /* Pods_LightningGame.framework */; };
 		7E02E53A2400F2A000968C00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02E5392400F2A000968C00 /* AppDelegate.swift */; };
 		7E02E53C2400F2A000968C00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02E53B2400F2A000968C00 /* SceneDelegate.swift */; };
 		7E02E53E2400F2A000968C00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02E53D2400F2A000968C00 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36663D09FF5FAF82F0FC065C /* Pods_LightningGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightningGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D562E62F74971C89A486B4 /* Pods-LightningGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightningGame.release.xcconfig"; path = "Target Support Files/Pods-LightningGame/Pods-LightningGame.release.xcconfig"; sourceTree = "<group>"; };
 		7E02E5362400F2A000968C00 /* LightningGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightningGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E02E5392400F2A000968C00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E02E53B2400F2A000968C00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		7E02E5422400F2A700968C00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E02E5452400F2A700968C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E02E5472400F2A700968C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA54CF5FF81E2F0BCA9BE17 /* Pods-LightningGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightningGame.debug.xcconfig"; path = "Target Support Files/Pods-LightningGame/Pods-LightningGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685508CCB89E03ABCBE07590 /* Pods_LightningGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35A494E7F1C54961367AAF11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDA54CF5FF81E2F0BCA9BE17 /* Pods-LightningGame.debug.xcconfig */,
+				38D562E62F74971C89A486B4 /* Pods-LightningGame.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7E02E52D2400F2A000968C00 = {
 			isa = PBXGroup;
 			children = (
 				7E02E5382400F2A000968C00 /* LightningGame */,
 				7E02E5372400F2A000968C00 /* Products */,
+				35A494E7F1C54961367AAF11 /* Pods */,
+				FBC1DB3A1B1BA45636EBCF06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = LightningGame;
 			sourceTree = "<group>";
 		};
+		FBC1DB3A1B1BA45636EBCF06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36663D09FF5FAF82F0FC065C /* Pods_LightningGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E02E54A2400F2A700968C00 /* Build configuration list for PBXNativeTarget "LightningGame" */;
 			buildPhases = (
+				71A8E60A961179B9531D52F4 /* [CP] Check Pods Manifest.lock */,
 				7E02E5322400F2A000968C00 /* Sources */,
 				7E02E5332400F2A000968C00 /* Frameworks */,
 				7E02E5342400F2A000968C00 /* Resources */,
+				F914D9F6D822F6B575A5DB91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71A8E60A961179B9531D52F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LightningGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F914D9F6D822F6B575A5DB91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightningGame/Pods-LightningGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightningGame/Pods-LightningGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LightningGame/Pods-LightningGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E02E5322400F2A000968C00 /* Sources */ = {
@@ -282,9 +350,11 @@
 		};
 		7E02E54B2400F2A700968C00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDA54CF5FF81E2F0BCA9BE17 /* Pods-LightningGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R4RWX5P694;
 				INFOPLIST_FILE = LightningGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,9 +369,11 @@
 		};
 		7E02E54C2400F2A700968C00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38D562E62F74971C89A486B4 /* Pods-LightningGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R4RWX5P694;
 				INFOPLIST_FILE = LightningGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
