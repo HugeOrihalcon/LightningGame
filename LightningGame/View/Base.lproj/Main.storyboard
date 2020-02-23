@@ -131,6 +131,7 @@
                         <outlet property="leftButton" destination="zws-Pc-Diz" id="oNj-N2-xjl"/>
                         <outlet property="rightButton" destination="7Wd-Ps-Z0H" id="e9f-AL-c6s"/>
                         <outlet property="tenButton" destination="6zS-4n-Xns" id="wfO-GE-kgV"/>
+                        <outlet property="timerLabel" destination="wQc-dF-sdZ" id="cW9-mU-tjk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTh-2x-Llf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

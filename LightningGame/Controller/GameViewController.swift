@@ -10,15 +10,16 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var tenButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var equalButton: UIButton!
     
-    var countdown = CountDown()
+    var countDown = CountDown()
     
-    
+    var timerCountString: String = ""
     
 
     override func viewDidLoad() {
@@ -29,12 +30,16 @@ class GameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        timerLabel.text = "test"
         // 10秒のカウントダウン開始
-        countdown.startTimer()
-        
+        countDown.startTimer()
         
     }
     
+    func updateTimerLabel() {
+        print(timerCountString)
+        timerLabel.text = "test2"
+    }
 
     /*
     // MARK: - Navigation

@@ -14,7 +14,9 @@ class CountDown {
     var timer = Timer()
     var startTime: TimeInterval? = nil
     
-//    var gameVC = GameViewController()
+    var timerCountString: String = "10.00"
+    
+    
     
     func startTimer() {
         startTime = Date.timeIntervalSinceReferenceDate
@@ -29,12 +31,16 @@ class CountDown {
     @objc func update() {
         if let startTime = startTime {
             t = 10.00 - (Date.timeIntervalSinceReferenceDate - startTime)
-            print(t)
-//            gameVC.timerLabel.text = String(t)
+            
         }
         if t <= 0 {
+            t = 0
             timer.invalidate()
         }
+        timerCountString = String(format: "%.2f", t)
+        let gameVC = GameViewController()
+        gameVC.timerCountString = timerCountString
+        gameVC.updateTimerLabel()
     }
     
     
