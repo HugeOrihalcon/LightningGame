@@ -17,9 +17,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var equalButton: UIButton!
     
-    var countDown = CountDown()
+//    var countDown = CountDown()
     
     var timerCountString: String = ""
+    
+    var t: Double = 10.00
+    var timer = Timer()
+    var startTime: TimeInterval? = nil
     
 
     override func viewDidLoad() {
@@ -32,13 +36,38 @@ class GameViewController: UIViewController {
         
         timerLabel.text = "test"
         // 10秒のカウントダウン開始
-        countDown.startTimer()
+//        countDown.startTimer()
+        startTimer()
         
     }
     
-    func updateTimerLabel() {
-        print(timerCountString)
-        timerLabel.text = "test2"
+//    func updateTimerLabel() {
+//        print(timerCountString)
+//        timerLabel.text = "test2"
+//    }
+    
+    
+    func startTimer() {
+        startTime = Date.timeIntervalSinceReferenceDate
+        timer = Timer.scheduledTimer(
+            timeInterval: 0.01,
+            target: self,
+            selector: #selector(update),
+            userInfo: nil,
+            repeats: true)
+    }
+    
+    @objc func update() {
+           if let startTime = startTime {
+               t = 10.00 - (Date.timeIntervalSinceReferenceDate - startTime)
+               
+           }
+           if t <= 0 {
+               t = 0
+               timer.invalidate()
+           }
+           timerCountString = String(format: "%.2f", t)
+           timerLabel.text = timerCountString
     }
 
     /*
