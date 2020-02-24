@@ -8,12 +8,18 @@
 
 import Foundation
 
+protocol CountDownDelegate : class {
+    func updateTimerLabel(_: String)
+}
+
 class CountDown {
     
     var t = Double()
     var timer = Timer()
     var startTime: TimeInterval? = nil
     var timerCountString: String = ""
+    
+    weak var delegate: CountDownDelegate?
     
     func startTimer() {
         startTime = Date.timeIntervalSinceReferenceDate
@@ -35,9 +41,10 @@ class CountDown {
             timer.invalidate()
         }
         timerCountString = String(format: "%.2f", t)
-        let gameVC = GameViewController()
-        gameVC.timerCountString = timerCountString
-        gameVC.updateTimerLabel()
+//        let gameVC = GameViewController()
+//        gameVC.timerCountString = timerCountString
+//        gameVC.updateTimerLabel()
+        delegate?.updateTimerLabel(timerCountString)
     }
     
     

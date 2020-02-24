@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, CountDownDelegate {
     
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -23,6 +23,9 @@ class GameViewController: UIViewController {
     
 
     override func viewDidLoad() {
+        
+        countDown.delegate = self
+        
         super.viewDidLoad()
     }
     
@@ -35,7 +38,7 @@ class GameViewController: UIViewController {
         
     }
     
-    func updateTimerLabel() {
+    func updateTimerLabel(_ timerCountString: String) {
         print(timerCountString)
         timerLabel.text = timerCountString
     }
