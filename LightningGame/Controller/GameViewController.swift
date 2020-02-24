@@ -30,7 +30,6 @@ class GameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        timerLabel.text = "test"
         // 10秒のカウントダウン開始
         countDown.startTimer()
         
@@ -38,7 +37,7 @@ class GameViewController: UIViewController {
     
     func updateTimerLabel() {
         print(timerCountString)
-        timerLabel.text = "test2"
+        timerLabel.text = timerCountString
     }
 
     /*

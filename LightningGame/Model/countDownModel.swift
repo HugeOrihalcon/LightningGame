@@ -10,13 +10,10 @@ import Foundation
 
 class CountDown {
     
-    var t: Double = 10.00
+    var t = Double()
     var timer = Timer()
     var startTime: TimeInterval? = nil
-    
-    var timerCountString: String = "10.00"
-    
-    
+    var timerCountString: String = ""
     
     func startTimer() {
         startTime = Date.timeIntervalSinceReferenceDate
