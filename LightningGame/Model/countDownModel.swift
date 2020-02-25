@@ -41,9 +41,6 @@ class CountDown {
             timer.invalidate()
         }
         timerCountString = String(format: "%.2f", t)
-//        let gameVC = GameViewController()
-//        gameVC.timerCountString = timerCountString
-//        gameVC.updateTimerLabel()
         delegate?.updateTimerLabel(timerCountString)
     }
     
