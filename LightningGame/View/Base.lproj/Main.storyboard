@@ -66,6 +66,9 @@
                                 <state key="normal" title="L">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="leftPush:" destination="Y6c-hl-QSC" eventType="touchUpInside" id="bXY-sO-6Bf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wd-Ps-Z0H">
                                 <rect key="frame" x="274" y="607" width="120" height="120"/>
@@ -78,6 +81,9 @@
                                 <state key="normal" title="R">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="rightPush:" destination="Y6c-hl-QSC" eventType="touchUpInside" id="ffW-ba-mRT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eq-1c-5Ny">
                                 <rect key="frame" x="147" y="737" width="120" height="120"/>
@@ -90,6 +96,9 @@
                                 <state key="normal" title="=">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="equalPush:" destination="Y6c-hl-QSC" eventType="touchUpInside" id="NkK-V4-D7a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-4n-Xns">
                                 <rect key="frame" x="147" y="477" width="120" height="120"/>
@@ -102,6 +111,9 @@
                                 <state key="normal" title="➓">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="tenPush:" destination="Y6c-hl-QSC" eventType="touchUpInside" id="oeq-iJ-rYK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQc-dF-sdZ">
                                 <rect key="frame" x="152.5" y="419" width="109.5" height="48"/>
@@ -109,7 +121,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-8v-A0D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-8v-A0D">
                                 <rect key="frame" x="20" y="278" width="374" height="96"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
                                 <nil key="textColor"/>
