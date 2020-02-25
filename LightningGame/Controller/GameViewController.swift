@@ -10,6 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController, CountDownDelegate {
     
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var tenButton: UIButton!
@@ -17,7 +18,13 @@ class GameViewController: UIViewController, CountDownDelegate {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var equalButton: UIButton!
     
+    var leftNumber = Int()
+    var rightNumber = Int()
+    var score = Int()
+    
+    // カウントダウンに必要な処理
     var countDown = CountDown()
+    var timer = Double()
     var timerCountString: String = ""
     
 
@@ -31,12 +38,14 @@ class GameViewController: UIViewController, CountDownDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // 10秒のカウントダウン開始
-        countDown.startTimer()
+        countDown.startTimer() // 10秒のカウントダウン開始
         
     }
     
     func updateTimerLabel(_ timerCountString: String) {
         timerLabel.text = timerCountString
     }
+    
+    
+    
 }

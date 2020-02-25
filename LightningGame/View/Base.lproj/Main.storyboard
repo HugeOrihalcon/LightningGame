@@ -109,17 +109,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-8v-A0D">
+                                <rect key="frame" x="20" y="278" width="374" height="96"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="gpz-5e-69f" firstAttribute="trailing" secondItem="KE8-8v-A0D" secondAttribute="trailing" constant="20" id="923-gM-7Ch"/>
+                            <constraint firstItem="wQc-dF-sdZ" firstAttribute="top" secondItem="KE8-8v-A0D" secondAttribute="bottom" constant="45" id="EEF-W5-Q4p"/>
                             <constraint firstItem="2eq-1c-5Ny" firstAttribute="top" secondItem="7Wd-Ps-Z0H" secondAttribute="bottom" constant="10" id="LU5-AC-a5g"/>
                             <constraint firstItem="6zS-4n-Xns" firstAttribute="centerX" secondItem="BXi-VP-S2R" secondAttribute="centerX" id="NRQ-yd-oRt"/>
                             <constraint firstItem="gpz-5e-69f" firstAttribute="trailing" secondItem="7Wd-Ps-Z0H" secondAttribute="trailing" constant="20" id="Qbe-bw-vB8"/>
                             <constraint firstItem="6zS-4n-Xns" firstAttribute="top" secondItem="wQc-dF-sdZ" secondAttribute="bottom" constant="10" id="X1j-5S-ZcE"/>
                             <constraint firstItem="wQc-dF-sdZ" firstAttribute="centerX" secondItem="BXi-VP-S2R" secondAttribute="centerX" id="apM-gy-X2K"/>
                             <constraint firstItem="2eq-1c-5Ny" firstAttribute="bottom" secondItem="gpz-5e-69f" secondAttribute="bottom" constant="-5" id="ccZ-FB-3N8"/>
+                            <constraint firstItem="KE8-8v-A0D" firstAttribute="centerX" secondItem="BXi-VP-S2R" secondAttribute="centerX" id="fTI-d7-LYm"/>
                             <constraint firstItem="zws-Pc-Diz" firstAttribute="leading" secondItem="gpz-5e-69f" secondAttribute="leading" constant="20" id="jcZ-6f-MEA"/>
                             <constraint firstItem="2eq-1c-5Ny" firstAttribute="top" secondItem="zws-Pc-Diz" secondAttribute="bottom" constant="10" id="rOn-nn-B2s"/>
+                            <constraint firstItem="KE8-8v-A0D" firstAttribute="leading" secondItem="gpz-5e-69f" secondAttribute="leading" constant="20" id="s0U-dH-FUS"/>
                             <constraint firstItem="2eq-1c-5Ny" firstAttribute="top" secondItem="6zS-4n-Xns" secondAttribute="bottom" constant="140" id="u50-RH-PxH"/>
                             <constraint firstItem="2eq-1c-5Ny" firstAttribute="centerX" secondItem="BXi-VP-S2R" secondAttribute="centerX" id="w4m-ex-MsP"/>
                         </constraints>
@@ -130,6 +140,7 @@
                         <outlet property="equalButton" destination="2eq-1c-5Ny" id="pmS-zy-Jjy"/>
                         <outlet property="leftButton" destination="zws-Pc-Diz" id="oNj-N2-xjl"/>
                         <outlet property="rightButton" destination="7Wd-Ps-Z0H" id="e9f-AL-c6s"/>
+                        <outlet property="scoreLabel" destination="KE8-8v-A0D" id="jJE-r8-4UY"/>
                         <outlet property="tenButton" destination="6zS-4n-Xns" id="wfO-GE-kgV"/>
                         <outlet property="timerLabel" destination="wQc-dF-sdZ" id="cW9-mU-tjk"/>
                     </connections>
