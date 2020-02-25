@@ -21,11 +21,11 @@ class GameViewController: UIViewController, CountDownDelegate {
     var leftNumber = Int()
     var rightNumber = Int()
     var score = Int()
+    var t = Double()
     
     // カウントダウンに必要な処理
     var countDown = CountDown()
     var timer = Double()
-    var timerCountString: String = ""
     
 
     override func viewDidLoad() {
@@ -42,8 +42,9 @@ class GameViewController: UIViewController, CountDownDelegate {
         
     }
     
-    func updateTimerLabel(_ timerCountString: String) {
-        timerLabel.text = timerCountString
+    func updateTimerLabel(_ t: Double) {
+        self.t = t
+        timerLabel.text = String(format: "%.2f", t)
     }
     
     

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CountDownDelegate : class {
-    func updateTimerLabel(_: String)
+    func updateTimerLabel(_: Double)
 }
 
 class CountDown {
@@ -17,7 +17,6 @@ class CountDown {
     var t = Double()
     var timer = Timer()
     var startTime: TimeInterval? = nil
-    var timerCountString: String = ""
     
     weak var delegate: CountDownDelegate?
     
@@ -40,8 +39,8 @@ class CountDown {
             t = 0
             timer.invalidate()
         }
-        timerCountString = String(format: "%.2f", t)
-        delegate?.updateTimerLabel(timerCountString)
+        t = Double(Int(t * 100)) / 100  // tを小数点第二位に変換
+        delegate?.updateTimerLabel(t)
     }
     
     
