@@ -23,9 +23,8 @@ class GameViewController: UIViewController, CountDownDelegate {
     var score = Int()
     var t = Double()
     
-    // カウントダウンに必要な処理
+    // カウントダウンに必要な要素
     var countDown = CountDown()
-    var timer = Double()
     
 
     override func viewDidLoad() {
