@@ -26,6 +26,11 @@ class GameViewController: UIViewController, CountDownDelegate {
     var answerTime = Double()
     var questionChangeTime = Double()
     
+    //Resultに渡すための変数
+    var numberOfResponses = Int()
+    var numberOfCorrect = Int()
+    var timeBonusPoint = Int()
+    
     // カウントダウンに必要な要素
     var countDown = CountDown()
     
@@ -40,7 +45,11 @@ class GameViewController: UIViewController, CountDownDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        t = 10.00 //残り時間をリセット
+        //色々な変数をリセット
+        t = 10.00
+        numberOfResponses = 0
+        numberOfCorrect = 0
+        timeBonusPoint = 0
         countDown.startTimer() // 10秒のカウントダウン開始
         changeNumber()
         
@@ -54,6 +63,16 @@ class GameViewController: UIViewController, CountDownDelegate {
     func timeOver() { //残り時間がゼロになった時の処理
         t = 10.00 //残り時間をリセット
         performSegue(withIdentifier: "toResult", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toResult" {
+            let resultVC = segue.destination as! ResultViewController
+            resultVC.score = score
+            resultVC.numberOfResponses = numberOfResponses
+            resultVC.numberOfCorrect = numberOfCorrect
+            resultVC.timeBonusPoint = timeBonusPoint
+        }
     }
     
     func changeNumber() { //左右のボタンの数字をランダムに変更するための関数
@@ -75,6 +94,7 @@ class GameViewController: UIViewController, CountDownDelegate {
     }
     
     func judgeAnswer() { //左右の数値から答え（correctNumber）を生成する関数
+        numberOfResponses += 1 //回答数を加算
         answerTime = t //回答時点の残り時間を記録
         if leftNumber + rightNumber == 10 {
             correctNumber = 1
@@ -92,12 +112,14 @@ class GameViewController: UIViewController, CountDownDelegate {
         if questionChangeTime - answerTime < 1 {
             bonusPoint = Int((1-(questionChangeTime - answerTime)) * 100)
             scorePlus(bonusPoint)
+            timeBonusPoint += bonusPoint
         }
     }
     
     @IBAction func tenPush(_ sender: Any) {
         judgeAnswer()
         if correctNumber == 1 {
+            numberOfCorrect += 1 //正当数を加算
             scorePlus(100)
             timeBonus()
         } else {
@@ -109,6 +131,7 @@ class GameViewController: UIViewController, CountDownDelegate {
     @IBAction func leftPush(_ sender: Any) {
         judgeAnswer()
         if correctNumber == 2 {
+            numberOfCorrect += 1 //正当数を加算
             scorePlus(100)
             timeBonus()
         } else {
@@ -120,6 +143,7 @@ class GameViewController: UIViewController, CountDownDelegate {
     @IBAction func rightPush(_ sender: Any) {
         judgeAnswer()
         if correctNumber == 3 {
+            numberOfCorrect += 1 //正当数を加算
             scorePlus(100)
             timeBonus()
         } else {
@@ -131,6 +155,7 @@ class GameViewController: UIViewController, CountDownDelegate {
     @IBAction func equalPush(_ sender: Any) {
         judgeAnswer()
         if correctNumber == 4 {
+            numberOfCorrect += 1 //正当数を加算
             scorePlus(100)
             timeBonus()
         } else {
