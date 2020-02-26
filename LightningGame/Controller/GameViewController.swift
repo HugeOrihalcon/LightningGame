@@ -51,6 +51,11 @@ class GameViewController: UIViewController, CountDownDelegate {
         timerLabel.text = String(format: "%.2f", t)
     }
     
+    func timeOver() { //残り時間がゼロになった時の処理
+        t = 10.00 //残り時間をリセット
+        performSegue(withIdentifier: "toResult", sender: nil)
+    }
+    
     func changeNumber() { //左右のボタンの数字をランダムに変更するための関数
         leftNumber = Int(arc4random_uniform(9)) + 1
         rightNumber = Int(arc4random_uniform(9)) + 1

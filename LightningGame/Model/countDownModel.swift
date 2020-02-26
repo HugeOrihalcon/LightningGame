@@ -9,7 +9,8 @@
 import Foundation
 
 protocol CountDownDelegate : class {
-    func updateTimerLabel(_: Double)
+    func updateTimerLabel(_: Double) //時間更新があった時の処理
+    func timeOver() //残り時間がゼロになった時の処理
 }
 
 class CountDown {
@@ -38,6 +39,7 @@ class CountDown {
         if t <= 0 {
             t = 0
             timer.invalidate()
+            delegate?.timeOver()
         }
         t = Double(Int(t * 100)) / 100  // tを小数点第二位に変換
         delegate?.updateTimerLabel(t)

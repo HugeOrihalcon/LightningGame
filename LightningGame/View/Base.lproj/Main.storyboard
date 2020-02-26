@@ -155,11 +155,27 @@
                         <outlet property="scoreLabel" destination="KE8-8v-A0D" id="jJE-r8-4UY"/>
                         <outlet property="tenButton" destination="6zS-4n-Xns" id="wfO-GE-kgV"/>
                         <outlet property="timerLabel" destination="wQc-dF-sdZ" id="cW9-mU-tjk"/>
+                        <segue destination="2OW-sg-9w0" kind="presentation" identifier="toResult" modalPresentationStyle="fullScreen" id="1vR-P3-9pJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTh-2x-Llf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="637.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="92L-fd-zL9">
+            <objects>
+                <viewController id="2OW-sg-9w0" customClass="ResultViewController" customModule="LightningGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="33t-Fy-m4N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ePv-uw-Kve"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ksv-DW-clR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391" y="139"/>
         </scene>
     </scenes>
 </document>

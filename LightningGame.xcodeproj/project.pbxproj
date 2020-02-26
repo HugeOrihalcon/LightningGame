@@ -17,6 +17,7 @@
 		7E02E5532401095A00968C00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E02E5522401095900968C00 /* GoogleService-Info.plist */; };
 		7E02E55524010C3C00968C00 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02E55424010C3C00968C00 /* GameViewController.swift */; };
 		7E02E55D240155CE00968C00 /* countDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02E55C240155CE00968C00 /* countDownModel.swift */; };
+		7E93B8AB2406384100A45A62 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93B8AA2406384000A45A62 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		7E02E5522401095900968C00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E02E55424010C3C00968C00 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		7E02E55C240155CE00968C00 /* countDownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countDownModel.swift; sourceTree = "<group>"; };
+		7E93B8AA2406384000A45A62 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		DDA54CF5FF81E2F0BCA9BE17 /* Pods-LightningGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightningGame.debug.xcconfig"; path = "Target Support Files/Pods-LightningGame/Pods-LightningGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 			children = (
 				7E02E550240103CD00968C00 /* TitleViewController.swift */,
 				7E02E55424010C3C00968C00 /* GameViewController.swift */,
+				7E93B8AA2406384000A45A62 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				7E02E55D240155CE00968C00 /* countDownModel.swift in Sources */,
 				7E02E53A2400F2A000968C00 /* AppDelegate.swift in Sources */,
 				7E02E53C2400F2A000968C00 /* SceneDelegate.swift in Sources */,
+				7E93B8AB2406384100A45A62 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
