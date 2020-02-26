@@ -127,16 +127,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2c-ea-lUk">
+                                <rect key="frame" x="311" y="49" width="83" height="48"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Retire">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="retryButton:" destination="Y6c-hl-QSC" eventType="touchUpInside" id="GTt-UC-oSt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gpz-5e-69f" firstAttribute="trailing" secondItem="KE8-8v-A0D" secondAttribute="trailing" constant="20" id="923-gM-7Ch"/>
+                            <constraint firstItem="gpz-5e-69f" firstAttribute="trailing" secondItem="v2c-ea-lUk" secondAttribute="trailing" constant="20" id="Cnm-ms-8Ka"/>
                             <constraint firstItem="wQc-dF-sdZ" firstAttribute="top" secondItem="KE8-8v-A0D" secondAttribute="bottom" constant="45" id="EEF-W5-Q4p"/>
                             <constraint firstItem="wQc-dF-sdZ" firstAttribute="leading" secondItem="gpz-5e-69f" secondAttribute="leading" constant="50" id="HS7-qQ-bCH"/>
                             <constraint firstItem="2eq-1c-5Ny" firstAttribute="top" secondItem="7Wd-Ps-Z0H" secondAttribute="bottom" constant="10" id="LU5-AC-a5g"/>
                             <constraint firstItem="6zS-4n-Xns" firstAttribute="centerX" secondItem="BXi-VP-S2R" secondAttribute="centerX" id="NRQ-yd-oRt"/>
                             <constraint firstItem="gpz-5e-69f" firstAttribute="trailing" secondItem="7Wd-Ps-Z0H" secondAttribute="trailing" constant="20" id="Qbe-bw-vB8"/>
                             <constraint firstItem="6zS-4n-Xns" firstAttribute="top" secondItem="wQc-dF-sdZ" secondAttribute="bottom" constant="10" id="X1j-5S-ZcE"/>
+                            <constraint firstItem="v2c-ea-lUk" firstAttribute="top" secondItem="gpz-5e-69f" secondAttribute="top" constant="5" id="Zf5-nO-Tqn"/>
                             <constraint firstItem="wQc-dF-sdZ" firstAttribute="centerX" secondItem="BXi-VP-S2R" secondAttribute="centerX" id="apM-gy-X2K"/>
                             <constraint firstItem="2eq-1c-5Ny" firstAttribute="bottom" secondItem="gpz-5e-69f" secondAttribute="bottom" constant="-5" id="ccZ-FB-3N8"/>
                             <constraint firstItem="KE8-8v-A0D" firstAttribute="centerX" secondItem="BXi-VP-S2R" secondAttribute="centerX" id="fTI-d7-LYm"/>
@@ -202,23 +215,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-fB-13e">
-                                <rect key="frame" x="225" y="797" width="128" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-fB-13e">
+                                <rect key="frame" x="202" y="804" width="197" height="48"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Retry">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="retryButton:" destination="2OW-sg-9w0" eventType="touchUpInside" id="pU9-Bs-gvM"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi8-VW-zmX">
-                                <rect key="frame" x="58" y="797" width="128" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi8-VW-zmX">
+                                <rect key="frame" x="10" y="804" width="184" height="48"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Quit">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="quitButton:" destination="2OW-sg-9w0" eventType="touchUpInside" id="Ej5-gW-Tch"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujY-CO-wGX">
                                 <rect key="frame" x="50" y="117" width="314" height="74"/>
@@ -244,20 +261,25 @@
                             <constraint firstItem="ePv-uw-Kve" firstAttribute="trailing" secondItem="X9f-b8-COI" secondAttribute="trailing" constant="15" id="7oa-zJ-906"/>
                             <constraint firstItem="R55-p8-Wcg" firstAttribute="leading" secondItem="ePv-uw-Kve" secondAttribute="leading" constant="30" id="Al0-KO-8Sg"/>
                             <constraint firstItem="ujY-CO-wGX" firstAttribute="leading" secondItem="ePv-uw-Kve" secondAttribute="leading" constant="50" id="CfO-fA-VAy"/>
+                            <constraint firstItem="E2t-fB-13e" firstAttribute="leading" secondItem="gi8-VW-zmX" secondAttribute="trailing" constant="10" id="CpU-ap-GBz"/>
                             <constraint firstItem="DWR-Hu-ZuQ" firstAttribute="leading" secondItem="ePv-uw-Kve" secondAttribute="leading" constant="15" id="GmR-Hw-q21"/>
                             <constraint firstItem="R55-p8-Wcg" firstAttribute="centerX" secondItem="33t-Fy-m4N" secondAttribute="centerX" id="IjE-CF-mDI"/>
                             <constraint firstItem="ePv-uw-Kve" firstAttribute="trailing" secondItem="R55-p8-Wcg" secondAttribute="trailing" constant="30" id="K8l-Hs-v0I"/>
+                            <constraint firstItem="ePv-uw-Kve" firstAttribute="bottom" secondItem="E2t-fB-13e" secondAttribute="bottom" constant="10" id="Mgz-Bd-rka"/>
                             <constraint firstItem="DWR-Hu-ZuQ" firstAttribute="top" secondItem="X9f-b8-COI" secondAttribute="bottom" constant="15" id="NGi-EX-sLc"/>
                             <constraint firstItem="X9f-b8-COI" firstAttribute="leading" secondItem="ePv-uw-Kve" secondAttribute="leading" constant="15" id="Qts-9G-WtV"/>
                             <constraint firstItem="R55-p8-Wcg" firstAttribute="top" secondItem="ePv-uw-Kve" secondAttribute="top" constant="10" id="Sh8-Gy-Udh"/>
+                            <constraint firstItem="ePv-uw-Kve" firstAttribute="bottom" secondItem="gi8-VW-zmX" secondAttribute="bottom" constant="10" id="VDE-3v-0sm"/>
                             <constraint firstItem="ePv-uw-Kve" firstAttribute="trailing" secondItem="6VX-se-9ht" secondAttribute="trailing" constant="15" id="Z5H-0Z-2PX"/>
                             <constraint firstItem="6VX-se-9ht" firstAttribute="leading" secondItem="ePv-uw-Kve" secondAttribute="leading" constant="15" id="ZHt-FT-xDS"/>
                             <constraint firstItem="FIl-MY-HNd" firstAttribute="top" secondItem="ujY-CO-wGX" secondAttribute="bottom" constant="35" id="aNs-hG-7TO"/>
                             <constraint firstItem="h7y-Az-5hW" firstAttribute="top" secondItem="FIl-MY-HNd" secondAttribute="bottom" constant="15" id="baX-y4-ypP"/>
+                            <constraint firstItem="ePv-uw-Kve" firstAttribute="trailing" secondItem="E2t-fB-13e" secondAttribute="trailing" constant="10" id="cEh-Zd-CMz"/>
                             <constraint firstItem="ePv-uw-Kve" firstAttribute="trailing" secondItem="ujY-CO-wGX" secondAttribute="trailing" constant="50" id="cs0-KY-ufO"/>
                             <constraint firstItem="ujY-CO-wGX" firstAttribute="centerX" secondItem="33t-Fy-m4N" secondAttribute="centerX" id="eyV-G4-i2R"/>
                             <constraint firstItem="ujY-CO-wGX" firstAttribute="top" secondItem="R55-p8-Wcg" secondAttribute="bottom" constant="15" id="ma7-cE-hW2"/>
                             <constraint firstItem="h7y-Az-5hW" firstAttribute="leading" secondItem="ePv-uw-Kve" secondAttribute="leading" constant="15" id="uaf-s5-XPR"/>
+                            <constraint firstItem="gi8-VW-zmX" firstAttribute="leading" secondItem="ePv-uw-Kve" secondAttribute="leading" constant="10" id="x9e-KY-Evi"/>
                             <constraint firstItem="FIl-MY-HNd" firstAttribute="leading" secondItem="ePv-uw-Kve" secondAttribute="leading" constant="15" id="zHs-Qg-7vr"/>
                             <constraint firstItem="ePv-uw-Kve" firstAttribute="trailing" secondItem="h7y-Az-5hW" secondAttribute="trailing" constant="15" id="ztv-di-HVa"/>
                         </constraints>
@@ -274,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ksv-DW-clR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357" y="139"/>
+            <point key="canvasLocation" x="1356.521739130435" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

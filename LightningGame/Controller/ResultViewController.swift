@@ -32,10 +32,20 @@ class ResultViewController: UIViewController {
         
         scoreLabel.text = String(score)
         basicPointLabel.text = "Basic point: \(numberOfCorrect * 100)"
-        missPenaltyLabel.text = "Miss penalty: \((numberOfResponses - numberOfCorrect) * (-50))"
+        missPenaltyLabel.text = "Miss penalty: \((numberOfResponses - numberOfCorrect) * (-100))"
         timeBonusLabel.text = "Time bonus: \(timeBonusPoint)"
         numberOfResponsesLabel.text = "Number of responses: \(numberOfResponses)"
-        accuracyRateLabel.text = "Accuracy rate: \((Double(numberOfCorrect) / Double(numberOfResponses)) * 100)%"
+        accuracyRateLabel.text = "Accuracy rate: \(Int((Double(numberOfCorrect) / Double(numberOfResponses)) * 100))%"
     }
+    
+    @IBAction func retryButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func quitButton(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
 }

@@ -47,6 +47,8 @@ class GameViewController: UIViewController, CountDownDelegate {
         
         //色々な変数をリセット
         t = 10.00
+        score = 0
+        scoreLabel.text = String(score)
         numberOfResponses = 0
         numberOfCorrect = 0
         timeBonusPoint = 0
@@ -123,7 +125,7 @@ class GameViewController: UIViewController, CountDownDelegate {
             scorePlus(100)
             timeBonus()
         } else {
-            scoreMinus(50)
+            scoreMinus(100)
         }
         changeNumber()
     }
@@ -135,7 +137,7 @@ class GameViewController: UIViewController, CountDownDelegate {
             scorePlus(100)
             timeBonus()
         } else {
-            scoreMinus(50)
+            scoreMinus(100)
         }
         changeNumber()
     }
@@ -147,7 +149,7 @@ class GameViewController: UIViewController, CountDownDelegate {
             scorePlus(100)
             timeBonus()
         } else {
-            scoreMinus(50)
+            scoreMinus(100)
         }
         changeNumber()
     }
@@ -159,11 +161,14 @@ class GameViewController: UIViewController, CountDownDelegate {
             scorePlus(100)
             timeBonus()
         } else {
-            scoreMinus(50)
+            scoreMinus(100)
         }
         changeNumber()
     }
     
+    @IBAction func retryButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     
