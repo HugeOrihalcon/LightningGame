@@ -23,6 +23,8 @@ class GameViewController: UIViewController, CountDownDelegate {
     var score = Int()
     var t = Double()
     var correctNumber = Int()
+    var answerTime = Double()
+    var questionChangeTime = Double()
     
     // カウントダウンに必要な要素
     var countDown = CountDown()
@@ -38,6 +40,7 @@ class GameViewController: UIViewController, CountDownDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        t = 10.00 //残り時間をリセット
         countDown.startTimer() // 10秒のカウントダウン開始
         changeNumber()
         
@@ -53,6 +56,7 @@ class GameViewController: UIViewController, CountDownDelegate {
         rightNumber = Int(arc4random_uniform(9)) + 1
         leftButton.setTitle(String(leftNumber), for: .normal)
         rightButton.setTitle(String(rightNumber), for: .normal)
+        questionChangeTime = t //出題時点での残り時間を記録
     }
     
     func scorePlus(_ point: Int) {
@@ -66,6 +70,7 @@ class GameViewController: UIViewController, CountDownDelegate {
     }
     
     func judgeAnswer() { //左右の数値から答え（correctNumber）を生成する関数
+        answerTime = t //回答時点の残り時間を記録
         if leftNumber + rightNumber == 10 {
             correctNumber = 1
         } else if leftNumber == rightNumber {
@@ -77,11 +82,19 @@ class GameViewController: UIViewController, CountDownDelegate {
         }
     }
     
+    func timeBonus() { //1秒以内に回答した場合にタイムボーナスを加算する
+        var bonusPoint = Int()
+        if questionChangeTime - answerTime < 1 {
+            bonusPoint = Int((1-(questionChangeTime - answerTime)) * 100)
+            scorePlus(bonusPoint)
+        }
+    }
     
     @IBAction func tenPush(_ sender: Any) {
         judgeAnswer()
         if correctNumber == 1 {
             scorePlus(100)
+            timeBonus()
         } else {
             scoreMinus(50)
         }
@@ -92,6 +105,7 @@ class GameViewController: UIViewController, CountDownDelegate {
         judgeAnswer()
         if correctNumber == 2 {
             scorePlus(100)
+            timeBonus()
         } else {
             scoreMinus(50)
         }
@@ -102,6 +116,7 @@ class GameViewController: UIViewController, CountDownDelegate {
         judgeAnswer()
         if correctNumber == 3 {
             scorePlus(100)
+            timeBonus()
         } else {
             scoreMinus(50)
         }
@@ -112,6 +127,7 @@ class GameViewController: UIViewController, CountDownDelegate {
         judgeAnswer()
         if correctNumber == 4 {
             scorePlus(100)
+            timeBonus()
         } else {
             scoreMinus(50)
         }
