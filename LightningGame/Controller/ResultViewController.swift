@@ -17,6 +17,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var numberOfResponsesLabel: UILabel!
     @IBOutlet weak var accuracyRateLabel: UILabel!
     
+    let rankinAlert = RankinAlert()
+    
     var score = Int()
     var numberOfResponses = Int()
     var numberOfCorrect = Int()
@@ -36,6 +38,11 @@ class ResultViewController: UIViewController {
         timeBonusLabel.text = "Time bonus: \(timeBonusPoint)"
         numberOfResponsesLabel.text = "Number of responses: \(numberOfResponses)"
         accuracyRateLabel.text = "Accuracy rate: \(Int((Double(numberOfCorrect) / Double(numberOfResponses)) * 100))%"
+        
+        //ランクインした場合の処理
+        if score >= 600 {
+            rankinAlert.rankin(viewController: self)
+        }
     }
     
     @IBAction func retryButton(_ sender: Any) {

@@ -15,7 +15,7 @@ class RankinAlert: UIViewController {
     var playerName = String()
     var alertTextField = UITextField()
 
-    func rankin() {
+    func rankin(viewController: UIViewController) {
         //アラートコントローラー
         let alert = UIAlertController(title: "ランクインしました‼︎", message: "あなたの名前を入力してください", preferredStyle: .alert)
         
@@ -39,6 +39,6 @@ class RankinAlert: UIViewController {
         }
         
         //アラートを表示
-        present(alert, animated: true, completion: nil)
+        viewController.present(alert, animated: true, completion: nil)
     }
 }
