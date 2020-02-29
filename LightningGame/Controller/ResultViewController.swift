@@ -19,11 +19,15 @@ class ResultViewController: UIViewController {
     
     let rankinAlert = RankinAlert()
     
-    var score = Int()
-    var numberOfResponses = Int()
-    var numberOfCorrect = Int()
-    var timeBonusPoint = Int()
     
+    var numberOfCorrect = Int()
+    
+    var score = Int()
+    var basicPoint = Int()
+    var missPenalty = Int()
+    var timeBonus = Int()
+    var numberOfResponses = Int()
+    var accuracyRate = Int()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +36,16 @@ class ResultViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        basicPoint = numberOfCorrect * 100
+        missPenalty = (numberOfResponses - numberOfCorrect) * (-100)
+        accuracyRate = Int((Double(numberOfCorrect) / Double(numberOfResponses)) * 100)
+        
         scoreLabel.text = String(score)
-        basicPointLabel.text = "Basic point: \(numberOfCorrect * 100)"
-        missPenaltyLabel.text = "Miss penalty: \((numberOfResponses - numberOfCorrect) * (-100))"
-        timeBonusLabel.text = "Time bonus: \(timeBonusPoint)"
+        basicPointLabel.text = "Basic point: \(basicPoint)"
+        missPenaltyLabel.text = "Miss penalty: \(missPenalty)"
+        timeBonusLabel.text = "Time bonus: \(timeBonus)"
         numberOfResponsesLabel.text = "Number of responses: \(numberOfResponses)"
-        accuracyRateLabel.text = "Accuracy rate: \(Int((Double(numberOfCorrect) / Double(numberOfResponses)) * 100))%"
+        accuracyRateLabel.text = "Accuracy rate: \(accuracyRate)%"
         
         //ランクインした場合の処理
         if score >= 600 {

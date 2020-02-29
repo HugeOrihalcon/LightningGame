@@ -73,7 +73,7 @@ class GameViewController: UIViewController, CountDownDelegate {
             resultVC.score = score
             resultVC.numberOfResponses = numberOfResponses
             resultVC.numberOfCorrect = numberOfCorrect
-            resultVC.timeBonusPoint = timeBonusPoint
+            resultVC.timeBonus = timeBonusPoint
         }
     }
     
