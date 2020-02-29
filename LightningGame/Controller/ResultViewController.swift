@@ -17,10 +17,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var numberOfResponsesLabel: UILabel!
     @IBOutlet weak var accuracyRateLabel: UILabel!
     
-    let rankinAlert = RankinAlert()
-    
-    
     var numberOfCorrect = Int()
+    var playerName = String()
     
     var score = Int()
     var basicPoint = Int()
@@ -49,7 +47,7 @@ class ResultViewController: UIViewController {
         
         //ランクインした場合の処理
         if score >= 600 {
-            rankinAlert.rankin(viewController: self)
+            rankin()
         }
     }
     
@@ -61,6 +59,30 @@ class ResultViewController: UIViewController {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func testButton(_ sender: Any) {
+        print(playerName)
+    }
+    
+    func rankin() {
+        var alertTextField = UITextField()
+        let alert = UIAlertController(title: "ランクインしました‼︎", message: "あなたの名前を入力してください", preferredStyle: .alert)
+        
+        //OKボタンを生成
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            guard let text = alertTextField.text else { return }
+            self.playerName = text
+        }
+        alert.addAction(okAction) //OKボタンを追加
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction) //Cancelボタン追加
+        
+        alert.addTextField { (text:UITextField!) in
+            alertTextField = text //TextFieldを追加
+            text.placeholder = "好きな名前を入力してね"
+        }
+        present(alert, animated: true, completion: nil) //アラートを表示
+    }
     
     
 }
