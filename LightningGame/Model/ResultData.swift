@@ -33,6 +33,14 @@ class ResultData {
         ref = Database.database().reference().child("players").childByAutoId()
     }
     
+    func toContents() -> [String: Any] {
+        return ["playerName": playerName, "score": score, "basicPoint": basicPoint, "missPenalty": missPenalty, "timeBonus": timeBonus, "numberOfResponses": numberOfResponses, "accuracyRate": accuracyRate]
+    }
+    
+    func save() {
+        ref.setValue(toContents())
+    }
+    
     
     
 }

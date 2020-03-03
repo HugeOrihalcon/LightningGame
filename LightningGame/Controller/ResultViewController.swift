@@ -58,10 +58,7 @@ class ResultViewController: UIViewController {
     @IBAction func quitButton(_ sender: Any) {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func testButton(_ sender: Any) {
-        print(playerName)
-    }
+
     
     func rankin() {
         var alertTextField = UITextField()
@@ -71,6 +68,9 @@ class ResultViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
             guard let text = alertTextField.text else { return }
             self.playerName = text
+            
+            let resultData = ResultData(playerName: self.playerName, score: self.score, basicPoint: self.basicPoint, missPenalty: self.missPenalty, timeBonus: self.timeBonus, numberOfResponses: self.numberOfResponses, accuracyRate: self.accuracyRate)
+            resultData.save()
         }
         alert.addAction(okAction) //OKボタンを追加
         
