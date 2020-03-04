@@ -68,7 +68,7 @@ class ResultViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
             guard let text = alertTextField.text else { return }
             self.playerName = text
-            
+            //firebaseに情報を保存
             let resultData = ResultData(playerName: self.playerName, score: self.score, basicPoint: self.basicPoint, missPenalty: self.missPenalty, timeBonus: self.timeBonus, numberOfResponses: self.numberOfResponses, accuracyRate: self.accuracyRate)
             resultData.save()
         }
