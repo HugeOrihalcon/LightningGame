@@ -14,7 +14,6 @@ class RankingTableViewController: UITableViewController {
     var resultDataArray = [ResultData]()
     
     @IBOutlet var resultTableView: UITableView!
-    @IBOutlet weak var playerNameAndScoreLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -48,9 +47,9 @@ class RankingTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         let playerData = resultDataArray[indexPath.row]
-        playerNameAndScoreLabel.text = "\(playerData.playerName): \(playerData.score)"
+        cell.playerNameAndScoreLabel.text = "\(playerData.playerName): \(playerData.score)"
         
         return cell
     }

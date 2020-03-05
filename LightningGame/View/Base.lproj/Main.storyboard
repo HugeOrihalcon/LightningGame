@@ -65,27 +65,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="66" id="nNM-wS-oMm">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="66" id="nNM-wS-oMm" customClass="TableViewCell" customModule="LightningGame" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nNM-wS-oMm" id="snx-UX-DhL">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5P-F8-Sg7">
-                                            <rect key="frame" x="25" y="16" width="364" height="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-Bb-CAf">
+                                            <rect key="frame" x="186" y="22" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="F5P-F8-Sg7" secondAttribute="bottom" constant="5" id="1lA-PO-Mjg"/>
-                                        <constraint firstItem="F5P-F8-Sg7" firstAttribute="leading" secondItem="snx-UX-DhL" secondAttribute="leadingMargin" constant="5" id="ET5-BG-7rk"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="F5P-F8-Sg7" secondAttribute="trailing" constant="5" id="VIl-Qy-r7x"/>
-                                        <constraint firstItem="F5P-F8-Sg7" firstAttribute="top" secondItem="snx-UX-DhL" secondAttribute="topMargin" constant="5" id="czA-ch-BuE"/>
-                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playerNameAndScoreLabel" destination="5Bi-Bb-CAf" id="zlk-hO-1Xc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -95,7 +93,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="DTC-PA-7aN"/>
                     <connections>
-                        <outlet property="playerNameAndScoreLabel" destination="F5P-F8-Sg7" id="s0s-bi-8eS"/>
                         <outlet property="resultTableView" destination="0WD-BI-5LW" id="X9b-rS-EWV"/>
                     </connections>
                 </tableViewController>

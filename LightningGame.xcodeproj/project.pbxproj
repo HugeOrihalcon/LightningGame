@@ -20,6 +20,7 @@
 		7E4810E9240A058600C19A46 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4810E8240A058600C19A46 /* ResultData.swift */; };
 		7E93B8AB2406384100A45A62 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93B8AA2406384000A45A62 /* ResultViewController.swift */; };
 		7EBBC0AE240E150400D3EA72 /* RankingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBC0AD240E150400D3EA72 /* RankingTableViewController.swift */; };
+		7EBBC0B4240F943E00D3EA72 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBC0B3240F943E00D3EA72 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		7E4810E8240A058600C19A46 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
 		7E93B8AA2406384000A45A62 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		7EBBC0AD240E150400D3EA72 /* RankingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewController.swift; sourceTree = "<group>"; };
+		7EBBC0B3240F943E00D3EA72 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		DDA54CF5FF81E2F0BCA9BE17 /* Pods-LightningGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightningGame.debug.xcconfig"; path = "Target Support Files/Pods-LightningGame/Pods-LightningGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				7E02E55424010C3C00968C00 /* GameViewController.swift */,
 				7E93B8AA2406384000A45A62 /* ResultViewController.swift */,
 				7EBBC0AD240E150400D3EA72 /* RankingTableViewController.swift */,
+				7EBBC0B3240F943E00D3EA72 /* TableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				7EBBC0AE240E150400D3EA72 /* RankingTableViewController.swift in Sources */,
 				7E02E55524010C3C00968C00 /* GameViewController.swift in Sources */,
 				7E02E551240103CD00968C00 /* TitleViewController.swift in Sources */,
+				7EBBC0B4240F943E00D3EA72 /* TableViewCell.swift in Sources */,
 				7E02E55D240155CE00968C00 /* countDownModel.swift in Sources */,
 				7E02E53A2400F2A000968C00 /* AppDelegate.swift in Sources */,
 				7E4810E9240A058600C19A46 /* ResultData.swift in Sources */,
