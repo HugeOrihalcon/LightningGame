@@ -99,11 +99,113 @@
                     <navigationItem key="navigationItem" id="DTC-PA-7aN"/>
                     <connections>
                         <outlet property="resultTableView" destination="0WD-BI-5LW" id="X9b-rS-EWV"/>
+                        <segue destination="BSF-us-BRr" kind="show" identifier="toDetail" id="AUI-Kz-sr8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3N8-vJ-EIH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="811.59420289855075" y="811.60714285714278"/>
+        </scene>
+        <!--Detail Ranker View Controller-->
+        <scene sceneID="Jkz-eZ-R97">
+            <objects>
+                <viewController id="BSF-us-BRr" customClass="DetailRankerViewController" customModule="LightningGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rPD-q9-Sfs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score is..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftn-MH-0lC">
+                                <rect key="frame" x="30" y="108" width="354" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic point:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVT-Y2-Hmo">
+                                <rect key="frame" x="15" y="280" width="384" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miss penalty:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f47-yN-erh">
+                                <rect key="frame" x="15" y="325" width="384" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time bonus:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnU-49-44e">
+                                <rect key="frame" x="15" y="370" width="384" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of responses:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz2-7l-YjG">
+                                <rect key="frame" x="15" y="415" width="384" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4o6-J1-J3l">
+                                <rect key="frame" x="50" y="171" width="314" height="74"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.49100416899999999" blue="0.46267640589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accuracy rate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haC-Iy-yzO">
+                                <rect key="frame" x="15" y="460" width="384" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="haC-Iy-yzO" firstAttribute="centerX" secondItem="rPD-q9-Sfs" secondAttribute="centerX" id="2kY-o1-fZd"/>
+                            <constraint firstItem="9Xg-Di-Fnh" firstAttribute="trailing" secondItem="4o6-J1-J3l" secondAttribute="trailing" constant="50" id="4b5-3b-R2g"/>
+                            <constraint firstItem="f47-yN-erh" firstAttribute="centerX" secondItem="rPD-q9-Sfs" secondAttribute="centerX" id="7tp-Hd-fzh"/>
+                            <constraint firstItem="OnU-49-44e" firstAttribute="centerX" secondItem="rPD-q9-Sfs" secondAttribute="centerX" id="8at-rz-gRJ"/>
+                            <constraint firstItem="9Xg-Di-Fnh" firstAttribute="trailing" secondItem="f47-yN-erh" secondAttribute="trailing" constant="15" id="Clr-pG-7fi"/>
+                            <constraint firstItem="Nz2-7l-YjG" firstAttribute="top" secondItem="OnU-49-44e" secondAttribute="bottom" constant="15" id="DDQ-Y4-r6d"/>
+                            <constraint firstItem="9Xg-Di-Fnh" firstAttribute="trailing" secondItem="ftn-MH-0lC" secondAttribute="trailing" constant="30" id="Duf-Q2-KIT"/>
+                            <constraint firstItem="4o6-J1-J3l" firstAttribute="leading" secondItem="9Xg-Di-Fnh" secondAttribute="leading" constant="50" id="FDO-YN-2tb"/>
+                            <constraint firstItem="9Xg-Di-Fnh" firstAttribute="trailing" secondItem="ZVT-Y2-Hmo" secondAttribute="trailing" constant="15" id="GMk-W6-Fab"/>
+                            <constraint firstItem="haC-Iy-yzO" firstAttribute="top" secondItem="Nz2-7l-YjG" secondAttribute="bottom" constant="15" id="L9a-Uw-dwL"/>
+                            <constraint firstItem="f47-yN-erh" firstAttribute="leading" secondItem="9Xg-Di-Fnh" secondAttribute="leading" constant="15" id="MLf-p0-SlG"/>
+                            <constraint firstItem="9Xg-Di-Fnh" firstAttribute="trailing" secondItem="OnU-49-44e" secondAttribute="trailing" constant="15" id="MRH-ba-X6J"/>
+                            <constraint firstItem="ftn-MH-0lC" firstAttribute="leading" secondItem="9Xg-Di-Fnh" secondAttribute="leading" constant="30" id="PKI-US-3QK"/>
+                            <constraint firstItem="4o6-J1-J3l" firstAttribute="top" secondItem="ftn-MH-0lC" secondAttribute="bottom" constant="15" id="PKy-55-tD8"/>
+                            <constraint firstItem="ZVT-Y2-Hmo" firstAttribute="leading" secondItem="9Xg-Di-Fnh" secondAttribute="leading" constant="15" id="SS5-e8-i7L"/>
+                            <constraint firstItem="haC-Iy-yzO" firstAttribute="leading" secondItem="9Xg-Di-Fnh" secondAttribute="leading" constant="15" id="T3q-fX-dc8"/>
+                            <constraint firstItem="ftn-MH-0lC" firstAttribute="centerX" secondItem="rPD-q9-Sfs" secondAttribute="centerX" id="X2Y-ip-RqC"/>
+                            <constraint firstItem="ZVT-Y2-Hmo" firstAttribute="top" secondItem="4o6-J1-J3l" secondAttribute="bottom" constant="35" id="fCq-B6-HDN"/>
+                            <constraint firstItem="Nz2-7l-YjG" firstAttribute="leading" secondItem="9Xg-Di-Fnh" secondAttribute="leading" constant="15" id="gLs-hw-Jy5"/>
+                            <constraint firstItem="f47-yN-erh" firstAttribute="top" secondItem="ZVT-Y2-Hmo" secondAttribute="bottom" constant="15" id="hGV-mY-zT0"/>
+                            <constraint firstItem="4o6-J1-J3l" firstAttribute="centerX" secondItem="rPD-q9-Sfs" secondAttribute="centerX" id="jsT-iq-cDo"/>
+                            <constraint firstItem="ftn-MH-0lC" firstAttribute="top" secondItem="9Xg-Di-Fnh" secondAttribute="top" constant="20" id="kEA-6t-62K"/>
+                            <constraint firstItem="9Xg-Di-Fnh" firstAttribute="trailing" secondItem="haC-Iy-yzO" secondAttribute="trailing" constant="15" id="maA-Wx-MK1"/>
+                            <constraint firstItem="9Xg-Di-Fnh" firstAttribute="trailing" secondItem="Nz2-7l-YjG" secondAttribute="trailing" constant="15" id="nIl-Dp-Ol3"/>
+                            <constraint firstItem="OnU-49-44e" firstAttribute="leading" secondItem="9Xg-Di-Fnh" secondAttribute="leading" constant="15" id="yOQ-6J-iWH"/>
+                            <constraint firstItem="Nz2-7l-YjG" firstAttribute="centerX" secondItem="rPD-q9-Sfs" secondAttribute="centerX" id="yPV-Ih-hOC"/>
+                            <constraint firstItem="ZVT-Y2-Hmo" firstAttribute="centerX" secondItem="rPD-q9-Sfs" secondAttribute="centerX" id="yvi-NM-AHI"/>
+                            <constraint firstItem="OnU-49-44e" firstAttribute="top" secondItem="f47-yN-erh" secondAttribute="bottom" constant="15" id="z8r-RZ-VhS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Xg-Di-Fnh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r56-og-VhR"/>
+                    <connections>
+                        <outlet property="accuracyRateLabel" destination="haC-Iy-yzO" id="qec-Pc-eer"/>
+                        <outlet property="basicPointLabel" destination="ZVT-Y2-Hmo" id="qnI-sW-IQV"/>
+                        <outlet property="missPenaltyLabel" destination="f47-yN-erh" id="qGf-YB-RVv"/>
+                        <outlet property="numberOfResponsesLabel" destination="Nz2-7l-YjG" id="rxL-VB-PAB"/>
+                        <outlet property="playerNameLabel" destination="ftn-MH-0lC" id="Jx7-XZ-I7F"/>
+                        <outlet property="scoreLabel" destination="4o6-J1-J3l" id="2Jn-qB-90s"/>
+                        <outlet property="timeBonusLabel" destination="OnU-49-44e" id="WBG-ye-zgh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Igm-aX-dV5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="812"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="9JL-0h-aLW">

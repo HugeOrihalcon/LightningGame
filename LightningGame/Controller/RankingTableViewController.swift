@@ -14,6 +14,14 @@ class RankingTableViewController: UITableViewController {
     
     var resultDataArray = [ResultData]()
     
+    var playerName = String()
+    var score = Int()
+    var basicPoint = Int()
+    var missPenalty = Int()
+    var timeBonus = Int()
+    var numberOfResponses = Int()
+    var accuracyRate = Int()
+    
     @IBOutlet var resultTableView: UITableView!
     
 
@@ -54,6 +62,31 @@ class RankingTableViewController: UITableViewController {
         cell.playerNameAndScoreLabel.text = "\(playerData.playerName): \(playerData.score)"
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        playerName = resultDataArray[indexPath.row].playerName
+        score = resultDataArray[indexPath.row].score
+        basicPoint = resultDataArray[indexPath.row].basicPoint
+        missPenalty = resultDataArray[indexPath.row].missPenalty
+        timeBonus = resultDataArray[indexPath.row].timeBonus
+        numberOfResponses = resultDataArray[indexPath.row].numberOfResponses
+        accuracyRate = resultDataArray[indexPath.row].accuracyRate
+        
+        performSegue(withIdentifier: "toDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let detailVC = segue.destination as! DetailRankerViewController
+            detailVC.playerName = playerName
+            detailVC.score = score
+            detailVC.basicPoint = basicPoint
+            detailVC.missPenalty = missPenalty
+            detailVC.timeBonus = timeBonus
+            detailVC.numberOfResponses = numberOfResponses
+            detailVC.accuracyRate = accuracyRate
+        }
     }
     
     
