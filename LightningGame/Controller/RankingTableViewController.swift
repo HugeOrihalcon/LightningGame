@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import PKHUD
 
 class RankingTableViewController: UITableViewController {
     
@@ -23,6 +24,8 @@ class RankingTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        HUD.show(.progress)
+        
         Database.database().reference().child("players").observe(.value) { (snapshot) in
             self.resultDataArray.removeAll()
             for child in snapshot.children {
@@ -31,9 +34,8 @@ class RankingTableViewController: UITableViewController {
                 self.resultDataArray.insert(playerData, at: 0)
                 self.resultTableView.reloadData()
             }
+            HUD.hide()
         }
-        
-        
     }
     
     

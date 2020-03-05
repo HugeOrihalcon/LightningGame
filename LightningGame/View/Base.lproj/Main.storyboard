@@ -72,14 +72,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-Bb-CAf">
-                                            <rect key="frame" x="186" y="22" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-Bb-CAf">
+                                            <rect key="frame" x="25" y="16" width="364" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5Bi-Bb-CAf" secondAttribute="bottom" constant="5" id="UG0-CP-tuj"/>
+                                        <constraint firstItem="5Bi-Bb-CAf" firstAttribute="top" secondItem="snx-UX-DhL" secondAttribute="topMargin" constant="5" id="VD7-dk-mQO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5Bi-Bb-CAf" secondAttribute="trailing" constant="5" id="qM6-Bb-tU3"/>
+                                        <constraint firstItem="5Bi-Bb-CAf" firstAttribute="leading" secondItem="snx-UX-DhL" secondAttribute="leadingMargin" constant="5" id="uPU-dk-12x"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="playerNameAndScoreLabel" destination="5Bi-Bb-CAf" id="zlk-hO-1Xc"/>

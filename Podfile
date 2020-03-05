@@ -11,7 +11,6 @@ pod 'Firebase'
 pod 'Firebase/Database'
 pod 'Firebase/Core'
 pod 'Firebase/Storage'
-pod 'SwiftEntryKit', '1.2.3'
-
+pod 'PKHUD'
 
 end
