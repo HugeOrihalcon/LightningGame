@@ -34,7 +34,7 @@ class RankingTableViewController: UITableViewController {
         
         HUD.show(.progress)
         
-        Database.database().reference().child("players").observe(.value) { (snapshot) in
+        Database.database().reference().child("players").queryOrdered(byChild: "score").observe(.value) { (snapshot) in
             self.resultDataArray.removeAll()
             for child in snapshot.children {
                 let childSnapshot = child as! DataSnapshot
