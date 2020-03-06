@@ -36,7 +36,9 @@ class ResultViewController: UIViewController {
         
         basicPoint = numberOfCorrect * 100
         missPenalty = (numberOfResponses - numberOfCorrect) * (-100)
-        accuracyRate = Int((Double(numberOfCorrect) / Double(numberOfResponses)) * 100)
+        if numberOfResponses != 0 {
+            accuracyRate = Int((Double(numberOfCorrect) / Double(numberOfResponses)) * 100)
+        }
         
         scoreLabel.text = String(score)
         basicPointLabel.text = "Basic point: \(basicPoint)"
@@ -46,7 +48,7 @@ class ResultViewController: UIViewController {
         accuracyRateLabel.text = "Accuracy rate: \(accuracyRate)%"
         
         //ランクインした場合の処理
-        if score >= 600 {
+        if score >= 0 {
             rankin()
         }
     }
