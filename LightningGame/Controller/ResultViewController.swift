@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import PKHUD
+import Firebase
 
 class ResultViewController: UIViewController {
     
@@ -48,8 +50,16 @@ class ResultViewController: UIViewController {
         accuracyRateLabel.text = "Accuracy rate: \(accuracyRate)%"
         
         //ランクインした場合の処理
-        if score >= 0 {
-            rankin()
+        HUD.show(.progress)
+        Database.database().reference().child("players").queryOrdered(byChild: "score").queryLimited(toFirst: 1).observe(.value) { (snapshot) in
+            for child in snapshot.children {
+                let childSnapshot = child as! DataSnapshot
+                let playerData = ResultData(snapshot: childSnapshot)
+                HUD.hide()
+                if self.score > playerData.score {
+                    self.rankin()
+                }
+            }
         }
     }
     
