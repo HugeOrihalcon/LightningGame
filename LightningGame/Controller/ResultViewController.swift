@@ -51,16 +51,28 @@ class ResultViewController: UIViewController {
         
         //ランクインした場合の処理
         HUD.show(.progress)
-        Database.database().reference().child("players").queryOrdered(byChild: "score").queryLimited(toFirst: 1).observe(.value) { (snapshot) in
+        Database.database().reference().child("players").queryOrdered(byChild: "score").queryLimited(toFirst: 1).observeSingleEvent(of: .value) { (snapshot) in
             for child in snapshot.children {
                 let childSnapshot = child as! DataSnapshot
                 let playerData = ResultData(snapshot: childSnapshot)
                 HUD.hide()
                 if self.score > playerData.score {
                     self.rankin()
+                    Database.database().reference().child("players").child(childSnapshot.key).removeValue()
                 }
             }
         }
+//        Database.database().reference().child("players").queryOrdered(byChild: "score").queryLimited(toFirst: 1).observe(.value) { (snapshot) in
+//            for child in snapshot.children {
+//                let childSnapshot = child as! DataSnapshot
+//                let playerData = ResultData(snapshot: childSnapshot)
+//                HUD.hide()
+//                if self.score > playerData.score {
+//                    self.rankin()
+//                    Database.database().reference().child("players").child(childSnapshot.key).removeValue()
+//                }
+//            }
+//        }
     }
     
     @IBAction func retryButton(_ sender: Any) {

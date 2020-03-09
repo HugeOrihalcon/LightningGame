@@ -20,6 +20,7 @@ class ResultData {
     var timeBonus = Int()
     var numberOfResponses = Int()
     var accuracyRate = Int()
+    var key = String()
     
     init(playerName: String, score: Int, basicPoint: Int, missPenalty: Int, timeBonus:Int, numberOfResponses:Int, accuracyRate: Int) {
         self.playerName = playerName
